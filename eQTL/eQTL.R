@@ -7,6 +7,7 @@ n.grids <- 100
 index <- 1:n.grids
 grids <- index / n.grids
 MAF <- seq(0.005, n.grids/2, by=0.5) / n.grids
+if(!require(powerEQTL))install.packages("powerEQTL")
 require(powerEQTL)
 png("eQTL.png", res=300, height=4.5, width=6, units="in")
 plot(MAF,grids,type="n",ylab="Power")
